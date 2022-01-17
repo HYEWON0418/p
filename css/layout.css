@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+header{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 70px;
+  z-index: 100;
+  margin: 0px auto;
+  transition: 0.3s;
+}
+
+header > h1{
+  width: 100px;
+  float: left;
+  padding-left: 350px;
+  margin-top: 10px;
+}
+header > h1 > a > img{
+  width: 90px;
+}
+header nav{
+  margin: 30px auto;
+  padding-left: 300px;
+  width: 1000px;
+}
+header .gnb{
+  font-family: 'score4';
+  display: flex;
+  justify-content: flex-end;
+}
+header .gnb a{
+  font-size: 1rem;
+  color: #fff;
+  margin-left: 40px;
+}
+
+
+main{
+  overflow: hidden;
+  clear: both;
+}
+
+#movie{
+  /*height: 936px;*/
+  height: 100vh; /* vertical hight 디바이스 높이에 따라 맞춰줌.*/
+  background-color: #1B557C;
+}
+
+#profile{
+  height: 100vh;
+  background: #F5F4F5;
+}
+
+#redesign{
+  height: 100vh;
+
+}
+
+#publishing{
+  height: 100vh;
+}
+/*
+#work{
+  height: 100vh;
+  background-color: hotpink;
+}
+*/

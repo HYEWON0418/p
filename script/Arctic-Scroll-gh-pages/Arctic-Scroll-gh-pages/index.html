@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Artic Scroll</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <style>
+        *,
+        *:before,
+        *:after{
+            box-sizing: border-box;
+        }
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: Helvetica, sans-serif;
+            margin: 0 auto;
+        }
+        nav {
+            position: fixed;
+            background-color: #4E818A;
+            padding: 7px 12px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a + a {
+            margin-left: 15px;
+        }
+        article, section, footer {
+            display: block;
+            padding: 50px 15px;
+            margin: 0 auto 50vh;
+            width: 100%;
+            max-width: 600px;
+        }
+        footer {
+            margin-bottom: 0;
+        }
+        h1 {
+            font-size: 48px;
+            line-height: 1.5;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+        h1 span {
+            font-weight: 100;
+            color: #ccc;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+        }
+        pre {
+            background-color: #eee;
+            border: 1px solid #999;
+            overflow: auto;
+            padding: 2px 5px;
+            margin-bottom: 20px;
+        }
+        pre code {
+            background-color: none;
+            padding: 0;
+        }
+        hr {
+            border: 0;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#top" class="arctic_scroll">Top</a>
+        <a href="#down" class="arctic_scroll">Down</a>
+        <a href="#further" class="arctic_scroll">Further</a>
+        <a href="#" class="arctic_scroll" data-position="100">Scrol to 100px</a>
+    </nav>
+
+    <section id="top">
+        <h1>Arctic Scroll</h1>
+        <p>A jQuery plugin, so cool, it's arctic! <b>See the <a href="https://github.com/PaulAdamDavis/Arctic-Scroll">GitHub repo</a></b></p>
+    </section>
+
+    <section id="down">
+        <h1>Down</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum tenetur magnam, fuga aspernatur quos facilis, nisi. Adipisci fuga ducimus, hic dolores praesentium minus dicta reiciendis magni nulla, sequi inventore doloribus, ab placeat consequatur laborum laudantium quaerat sunt consectetur in recusandae dolorem. Exercitationem a commodi repellat blanditiis tempora, recusandae qui, aliquam?</p>
+    </section>
+
+    <section id="further">
+        <h1>Further</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fuga porro aspernatur qui laboriosam dolorem. Deserunt aperiam perspiciatis quo architecto at, veritatis libero. Ex velit, nobis delectus molestiae ut! Quidem nihil blanditiis, facere totam consequuntur unde quia dolorum iste laudantium doloribus consequatur dolorem dolor voluptas in labore, sint! Alias, neque!</p>
+    </section>
+
+    <footer>
+        <p>Did you like that?</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="jquery.arctic_scroll.js"></script>
+    <script>
+        $(function(){
+            $(".arctic_scroll").arctic_scroll({
+                speed: 800
+            });
+        });
+    </script>
+
+</body>
+</html>

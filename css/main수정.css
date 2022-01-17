@@ -1,0 +1,400 @@
+@charset "utf-8";
+
+/* 메인메뉴와 로그인, 알림 아이콘 서식 */
+.on{
+  color: #000 !important;
+}
+/* 로고 */
+
+/* 헤더에 마우스 오버시 적용할 서식 */
+/*.h_on{
+  background-color: #1B557C !important;
+}*/
+hr{
+  border: 0;
+  height: 1px;
+  background: #ccc;
+}
+/* 메인 내비게이션 */
+#m_nav{
+  position: fixed;right: 30px;top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 50px;height: 160px;
+}
+#m_nav > ul{
+  position: relative;
+}
+#m_nav > ul > li{
+  width: 15px;height: 15px;
+  /*background-color: rgba(0, 0, 0, .8);*/
+  border-radius: 3%;
+  position: absolute;right: 0px;
+  line-height: 30px;
+  /*text-align: center;*/
+  overflow: hidden;
+  transition: 0.5s;
+}
+#m_nav > ul > li:first-child{}
+#m_nav > ul > li:nth-child(2){top: 50px;}
+#m_nav > ul > li:nth-child(3){top: 100px;}
+#m_nav > ul > li:nth-child(4){top: 150px;}
+#m_nav > ul > li:nth-child(5){top: 200px;}
+#m_nav > ul > li:last-child{top: 250px;}
+
+.arctic_Scroll{
+  position: absolute;right: 10px;
+}
+.act{
+  width: 100px !important;
+  
+}
+
+#m_nav > ul > li > span{
+  display: inline-block;
+  width: 15px;height: 15px;
+  border-radius: 3%;
+  background-color: #F27C7E;
+  color: #F27C7E;
+  text-align: center;
+  font-weight: bold;
+}
+
+#m_nav > ul > li:hover > span{
+  background: #eba1a2;
+}
+
+#m_nav > ul > li > a{
+  color: #F27C7E;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  position: absolute;top: -8px;
+}
+
+
+/* 메인영상 서식*/
+#movie{position: relative;}
+
+/* 메인영상 위에 올라가는 콘텐츠*/
+.m_info{
+  position: absolute;
+  width: 100%;top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+.m_info h2 > span{
+  color: #F27C7E;
+}
+.m_info h2{
+  font-family: 'cooper';
+  font-size: 100px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+#movie p{
+  font-family: 'score4';
+  color: #fff;
+  line-height: 50px;
+  font-size: 30px;
+  padding-top: 300px;
+}
+.m_info a{
+  color: #fff;
+  font-size: 14px;
+  text-decoration: underline;
+  margin: 0px 20px;
+  padding: 5px 10px;
+}
+.m_info a:first-of-type{
+  background-color: rgb(0, 110, 255);
+}
+/*.movie #next_btn{
+  position: absolute;
+  bottom: 40px;
+  display: inline-block;
+  width: 12px;height: 7px;
+  background-image: url('../images/bg-arrow.2c3ad4f.png');
+  background-position: -30px -30px;
+}*/
+#movie #next_btn{
+  position: absolute;
+  bottom: 50px;left: 50%;
+  transform: translateY(-50%);
+  transform: rotate(45deg);
+  display: inline-block;
+  width: 30px;height: 30px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  text-indent: -9999px;
+}
+
+/*프로필*/
+#profile{font-family: 'score4';}
+.title h1{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  padding-top: 50px;
+
+}
+.about{
+  
+}
+.img{
+  float: left;
+  left: 50%;
+  padding: 120px 150px 120px 200px;
+}
+.img .about{
+  padding-top: 30px;
+  line-height: 30px;
+}
+.about p{color: #1B557C;
+font-weight: bold;
+font-family: "cooper";
+text-align: center;}
+#profile .pro{
+  float: right;
+  width: 50%;
+}
+#profile > .pro > dl > dt{
+  font-size: 20px;
+  font-family: 'cooper';
+  color: #1B557C;
+  text-transform: capitalize;
+  padding: 20px 0px;
+  line-height: 30px;
+}
+#profile > .pro > dl > dd{
+  line-height: 30px;
+}
+
+/* 스킬바 */
+.zt-span6 > h3{
+  padding: 20px 0px;
+  line-height: 30px;
+}
+.zt-span6 > h3 > strong{
+  font-size: 20px;
+  font-family: 'cooper';
+  color: #1B557C;
+  text-transform: capitalize;
+  
+}
+.zt-skill-bar {
+  color: #fff;
+  font-size: 11px;
+  line-height: 25px;
+  width: 500px;
+  height: 25px;
+  margin-bottom: 5px;
+
+  background-color: rgba(0,0,0,0.1);
+
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+          border-radius: 2px;
+
+}
+
+.zt-skill-bar * {
+  webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+     -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+         transition: all 0.5s ease;
+}
+
+.zt-skill-bar div {
+  /*background-color: #05afe8;*/
+  background-color: #198394;
+  position: relative;
+  padding-left: 25px;
+  width: 0;
+
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+     -ms- border-radius: 2px;
+          border-radius: 2px;
+}
+
+.zt-skill-bar span {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 0 5px 0 10px;
+  background-color: #1a1a1a;
+
+  -webkit-border-radius: 0 2px 2px 0;
+     -moz-border-radius: 0 2px 2px 0;
+      -ms-border-radius: 0 2px 2px 0;
+          border-radius: 0 2px 2px 0;
+}
+
+.zt-skill-bar span:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  left: -3px;
+  margin-top: -3px;
+  background-color: #1a1a1a;
+
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* 리디자인 */
+#redesign{
+  text-align: center;
+  font-family: "score4";
+}
+/*#redesign > .re_img > img{
+  width: 900px;
+}*/
+.swiper-slide > .re_img > p{
+  text-align: center;
+  position: absolute;
+  top: 520px;right: 45%;
+}
+#redesign .outer{
+  text-align: center;
+}
+#redesign .outer > .btn_p{
+  display: inline-block;
+  border: 1px solid #F27C7E;
+  background-color: #F27C7E;
+  width: 150px;
+  margin-right: 20px;
+  padding: 10px 30px;
+  text-align: center;
+}
+#redesign .outer > .btn_p > a{
+  color: #fff;
+}
+.swiper-button-prev, .swiper-button-next{
+  position: absolute;
+  bottom: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  line-height: 3rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+}
+.swiper-button-prev{
+  left: 1230px !important;
+}
+.swiper-button-next{
+  left: 1330px !important;
+}
+.swiper-button-prev, .swiper-button-next{
+  top: 252% !important;
+}
+.swiper-pagination{
+  top: 253%;
+  left: 18% !important;
+}
+
+
+/* 퍼블리싱 */
+#publishing .title{
+  padding-bottom: 30px;
+}
+
+/* 아코디언 */ 
+/**{
+  margin: 0;padding: 0;
+  box-sizing: border-box;color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;align-items: center;
+}
+*/
+.main_box {
+  width: 100%;
+  height: 83vh;
+  display: flex;
+}
+
+.main_box > .imgs {
+  flex: 1;
+  height: 100%;
+  /*transform: skew(10deg);*/
+  cursor: pointer;
+  margin: 0;
+  transition: all .3s;
+  background-repeat: no-repeat;
+  /*background-size: cover;*/
+  background-position: center;
+  position: relative;
+}
+
+p {
+  font-family: "black";
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 10rem;
+  left: 0;
+  padding: .75em;
+  background-color: transparent;
+  /*transform: rotate(-90deg);*/
+  /*transform-origin: 0% 0%;*/
+  transition: all 0.3s;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: transparent;
+}
+
+.img1 {
+  background-image: url('../images/main01.jpg');
+}
+
+.img2 {
+  background-image: url('./images/redesign_dalcomm.jpg');
+}
+
+.img3 {
+  background-image: url(
+https://media.geeksforgeeks.org/wp-content/uploads/20211216100753/GFG3.jpg);
+}
+
+.img4 {
+  background-image: url(
+https://media.geeksforgeeks.org/wp-content/uploads/20211216100754/GFG4.jpg);
+}
+
+.main_box:hover .imgs {
+  transform: skew(0);
+}
+
+.imgs:hover {
+  flex: 2.1;
+  filter: none;
+}
+.imgs:not(hover){
+  filter: ;
+}
+
+.imgs:hover p {
+  
+  background-color: rgba(0,0,0,0.6);
+  /*border: .125em solid blue;*/
+  color: rgb(255, 255, 255);
+  transform: rotate(0deg);
+}
+
+/**/
