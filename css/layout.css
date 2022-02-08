@@ -13,7 +13,7 @@ header{
 header > h1{
   width: 100px;
   float: left;
-  padding-left: 350px;
+  padding-left: 15%;
   margin-top: 10px;
 }
 header > h1 > a > img{
@@ -35,6 +35,8 @@ header .gnb a{
   margin-left: 40px;
 }
 
+/*메인*/
+
 
 main{
   overflow: hidden;
@@ -45,10 +47,13 @@ main{
   /*height: 936px;*/
   height: 100vh; /* vertical hight 디바이스 높이에 따라 맞춰줌.*/
   background-color: #1B557C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #profile{
-  height: 100vh;
+  height: 110vh;
   background: #F5F4F5;
 }
 
