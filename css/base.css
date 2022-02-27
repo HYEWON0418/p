@@ -54,7 +54,7 @@ footer{
   padding-top: 20px;
   margin-top: 100px;
   font-family: "score4";
-  width: 480px;height: 200px;
+  width: 480px;height: 220px;
   background-color: salmon;
   color: #fff;
   text-align: center;
@@ -78,3 +78,79 @@ footer{
   font-family: "score4";
 
 }
+
+/*버튼서식*/
+
+.r_btn{
+  margin-top: 20px;
+  background: rgba(242, 124, 126,1);
+  background: linear-gradient(0deg, rgba(242, 124, 126,1) 0%, rgba(243, 124, 126,1) 100%);
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.r_btn span{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.r_btn:before,
+.r_btn:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgba(243, 124, 126,1);
+  transition: all 0.3s ease;
+}
+.r_btn:before {
+  height: 0%;
+  width: 2px;
+}
+.r_btn:after {
+  width: 0%;
+  height: 2px;
+}
+.r_btn:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.r_btn:hover:before {
+  height: 100%;
+}
+.r_btn:hover:after {
+  width: 100%;
+}
+.r_btn span:hover{
+   color: rgba(243, 124, 126,1);
+}
+.r_btn span:before,
+.r_btn span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgba(243, 124, 126,1);
+  transition: all 0.3s ease;
+}
+.r_btn span:before {
+  width: 2px;
+  height: 0%;
+}
+.r_btn span:after {
+  width: 0%;
+  height: 2px;
+}
+.r_btn span:hover:before {
+  height: 100%;
+}
+.r_btn span:hover:after {
+  width: 100%;
+}
+

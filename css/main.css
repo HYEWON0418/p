@@ -95,7 +95,7 @@ hr{
 
 .m_info h2 {
   font-family: 'cooper';
-  font-size: 100px;
+  font-size: 8rem;
   font-weight: bold;
   padding-bottom: 30px;
   color: #F27C7E;
@@ -183,23 +183,28 @@ hr{
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  font-size: 40px;
-  padding-top: 50px;
+  font-size: 3rem;
+  padding-top: 5%;
 }
 .title02{
-  padding-bottom: 50px;
+  padding-bottom: 5%;
 }
 .title02 h1{
   font-weight: bold;
   text-align: center;
   text-transform: capitalize;
-  font-size: 40px;
-  padding-top: 50px;
+  font-size: 3rem;
+  padding-top: 5%;
+}
+#profile>div{
+  float: left;
+  width: 50%;
+  height: 110vh;
 }
 .img{
-  float: left;
-  left: 50%;
-  padding: 50px 150px 120px 250px;
+  padding-top: 3%;
+  padding-left: 10%;
+  box-sizing: border-box;
 }
 .img img{
   max-width: 300px;
@@ -211,19 +216,15 @@ hr{
 .about p{
 text-align: center;
 }
-#profile .pro{
-  float: right;
-  width: 50%;
-}
 .pro > dl > dt, .interest > dl > dt, .about > dl > dt{
-  font-size: 20px;
+  font-size: 1.4rem;
   font-family: 'cooper';
   color: #1B557C;
   text-transform: capitalize;
-  padding: 20px 0px;
+  padding: 20px 0;
   line-height: 30px;
 }
-#profile > .pro > dl > dd{
+#profile > .p_left> .pro > dl > dd{
   line-height: 30px;
 }
 
@@ -245,9 +246,6 @@ text-align: center;
   padding: 5px 0px;
   text-align: center;
   color: #333;
-}
-.title02{
-  
 }
 
 /* 스킬바 */
@@ -320,6 +318,7 @@ text-align: center;
 .mySwiper{
   width: 900px;
 }
+#redesign .outer button{position: relative;}
 #redesign .outer > h3{
   padding-top: 20px;
   line-height: 40px;
@@ -332,6 +331,7 @@ text-align: center;
   width: 200px;
   margin-bottom: 20px;
 }
+#redesign .outer > h2 a{}
 .outer > h2 > .color1{color: #A32829;}
 .outer > h2 > .color2{color: #A79393;}
 .outer > h2 > .color3{color: #EF426F;}
@@ -339,18 +339,6 @@ text-align: center;
 #redesign .outer > p > .bold{
   font-weight: bold;
   line-height: 30px;
-}
-#redesign .outer > .btn_p{
-  display: inline-block;
-  border: 1px solid #F27C7E;
-  background-color: #F27C7E;
-  width: 150px;
-  margin: 50px 20px 0px 0px;
-  padding: 10px 30px;
-  text-align: center;
-}
-#redesign .outer > .btn_p > a{
-  color: #fff;
 }
 .mySwiper{position: relative;}
 .swiper-button-prev{
@@ -430,20 +418,20 @@ text-align: center;
 }
 
 .img1 {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../images/main01.jpg');
+  background-image:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('../images/main01.jpg');
   /*background-image: url('../images/main01.jpg');*/
 }
 
 .img2 {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../images/main1.png');
+  background-image:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('../images/main1.png');
 }
 
 .img3 {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../images/care.png');
+  background-image:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('../images/care.png');
 }
 
 .img4 {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../images/vista.jpg');
+  background-image:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('../images/vista.jpg');
   background-position: right;
 }
 

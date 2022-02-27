@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="./css/swiper.css" type="text/css">
   <!--제이쿼리 슬라이드 스크립트-->
   <script src="./script/swiper.js"></script>
+  <script src="script/script.js"></script>
 
   <style>
     
@@ -79,80 +80,6 @@
       
 
   </style>
-
-  <script>
-    $(document).ready(function(){
-
-      //모달창 띄우기
-      let modal = '<div class="modal"><p class="box"><span class="notice">notice<br></span> 2022 Ver. | 본 사이트는 1920*1080 해상도에 최적화되어있습니다.<br> 본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다.<br>일부 내용 및 이미지 등은 출처가 따로 있음을 밝힙니다.</p><p><input type="checkbox" id="ch"><label for="ch">오늘 하루 창 열지 않기</label><input type="button" value="닫기" id="c_btn"></a></p></div>';
-
-      //body태그의 안쪽으로 맨 뒤쪽에 모달내용 출력하기
-      $('body').append(modal);
-
-      /*
-      제이쿼리 쿠키 사용법
-      $.cookie('쿠키이름', '쿠키값', {expires:만료일, path:'저장경로'});
-      */
-
-      //1. 사용자의 브라우저에 쿠키값이 none일때
-      if($.cookie('popup')=='none'){
-        $('.modal').hide();
-      }
-
-      let $ex = $('.modal #ch'); //체크박스 변수선언하기
-
-      //사용자가 체크박스에 체크를 했는지 안했는지 확인하는 함수
-      function closeModal(){
-        if($ex.is(':checked')){ //체크박스에 체크가 된 경우
-          $.cookie('popup', 'none', {expires:1, path:'/'}); //쿠키파일 생성하고
-        }
-        $('.modal').hide(); //팝업 숨김
-      }
-
-      //체크하지 않고 그냥 닫기를 누르는 경우
-      $('#c_btn').click(function(){
-        closeModal();
-      });
-
-      //메인내비게이션 마우스 오버시 가로길이 늘리기
-      let m_nav = $('#m_nav > ul > li');
-
-      m_nav.hover(function(){
-        $(this).addClass('act');
-      },function(){
-        $(this).removeClass('act');
-      });
-
-      $(window).scroll(function(){
-
-        let sPos = $(this).scrollTop();
-        console.log(sPos);
-
-        if(sPos >=900){
-          $('header').addClass('h_on');
-          $('header').find('.gnb a').addClass('on');
-          $('header').find('i.fas').addClass('on');
-          $('header').find('h1 img').attr('src','./images/로고수정.png');
-          $('header > hr').hide();
-
-        }else{
-          $('header').removeClass('h_on');
-          $('.gnb a').removeClass('on');
-          $('header i.fas').removeClass('on');
-          $('h1 img').attr('src','./images/로고수정.png');
-          $('header > hr').show();
-        }
-      });
-
-      /*퍼블리싱 효과*/
-
-      $(".hover").mouseleave(
-        function () {
-          $(this).removeClass("hover");
-        });
-
-    });
-  </script>
 </head>
 <body>
   <!-- 헤더영역 시작 -->
@@ -205,7 +132,7 @@
     <!--프로필-->
     <section id="profile">
       <div class="img">
-        <img src="./images/me.jpg" alt="">
+        <img src="./images/me.jpg" alt="증명사진">
         <div class="about">
           <dl>
             <dt>profile</dt>
@@ -237,62 +164,39 @@
         </div>
 
       </div>
-      <div class="title02">
-        <h1>about me,</h1>
+      <div class="p_left">
+        <div class="title02">
+          <h1>about me,</h1>
+        </div>
+        <div class="pro">
+          <dl>
+            <dt>education</dt>
+            <dd>2022 그린컴퓨터아트학원 디지털 디자인-반응형 웹디자인 전문가 양성과정 수료</dd>
+            <dd>2021 지파운데이션 회원관리팀 간사</dd>
+            <dd>2019 한동대확교 상담심리사회복지학부 졸업</dd>
+            <dd>2014 보성여자고등학교 인문계열 졸업</dd>
+          </dl>
+  
+          <dl>
+            <dt>license</dt>
+            <dd>2021 GTQ 1급</dd>
+            <dd>2019 컴퓨터활용능력 1급</dd>
+            <dd>2019 사회조사분석사 2급</dd>
+            <dd>2019 사회복지사 1급</dd>
+          </dl>
+  
+          <div class="zt-span6 last">
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <h3><strong>skill</strong></h3>
+            <div class="zt-skill-bar"><div data-width="88" style="">HTML5<span>88%</span></div></div>
+            <div class="zt-skill-bar"><div data-width="92" style="">CSS3<span>92%</span></div></div>
+            <div class="zt-skill-bar"><div data-width="82" style="">JS&JQ<span>82%</span></div></div>
+            <div class="zt-skill-bar"><div data-width="85" style="">PS<span>85%</span></div></div>
+            <div class="zt-skill-bar"><div data-width="60" style="">IA<span>60%</span></div></div>
+          </div>
+          </div>
       </div>
-      <div class="pro">
-        <dl>
-          <dt>education</dt>
-          <dd>2022 그린컴퓨터아트학원 디지털 디자인-반응형 웹디자인 전문가 양성과정 수료</dd>
-          <dd>2021 지파운데이션 회원관리팀 간사</dd>
-          <dd>2019 한동대확교 상담심리사회복지학부 졸업</dd>
-          <dd>2014 보성여자고등학교 인문계열 졸업</dd>
-        </dl>
-
-        <dl>
-          <dt>license</dt>
-          <dd>2021 GTQ 1급</dd>
-          <dd>2019 컴퓨터활용능력 1급</dd>
-          <dd>2019 사회조사분석사 2급</dd>
-        </dl>
-
-        <div class="zt-span6 last">
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <h3><strong>skill</strong></h3>
-          <div class="zt-skill-bar"><div data-width="88" style="">HTML5<span>88%</span></div></div>
-          <div class="zt-skill-bar"><div data-width="92" style="">CSS3<span>92%</span></div></div>
-          <div class="zt-skill-bar"><div data-width="82" style="">JS&JQ<span>82%</span></div></div>
-          <div class="zt-skill-bar"><div data-width="85" style="">PS<span>85%</span></div></div>
-          <div class="zt-skill-bar"><div data-width="60" style="">IA<span>60%</span></div></div></div>
-
-      <script>
-      (function( $ ) {
-        "use strict";
-        $(function() {
-          $(window).scroll(function(){
-            let sPos = $(this).scrollTop();
-            console.log(sPos);
-            function animated_contents() {
-              $(".zt-skill-bar > div ").each(function (i) {
-                var $this  = $(this),
-                skills = $this.data('width');
-                $this.css({'width' : skills + '%'});
-
-            });
-        }
-       // if(jQuery().appear) {
-        if(sPos>=800){
-           // $('.zt-skill-bar').appear().on('appear', function() {
-                animated_contents();
-           // });
-        //} else {
-         //   animated_contents();
-        }
-    });
-  });
-}(jQuery));
-      </script>
     </section>
 
     <!--리디자인-->
@@ -311,8 +215,8 @@
               <P><span class="bold">제  작  물</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;반응형 메인페이지</P>
               <h3>컨셉설명</h3>
               <p>HTML, CSS, jQuery를 이용하여 달콤커피 웹사이트를 리뉴얼한<br>프로젝트입니다.미디어 쿼리를 사용하여 PC/Tablet/Mobile 에서<br>보이는 화면을 사용성이 용이하도록 구성했습니다.</p>
-              <div class="btn_p"><a href="http://designlee.dothome.co.kr/1124/" title="달콤커피">Web 바로가기</a></div>
-              <div class="btn_p"><a href="">Process 보기</a></div>
+              <a href="http://designlee.dothome.co.kr/1124/" title="달콤커피" target="_blink"><button class="r_btn"><span>web 바로가기</span></button></a>
+              <!--<div><a href="">Process 보기</a></div>-->
             </div>
           </div>
 
@@ -327,8 +231,8 @@
               <P><span class="bold">제  작  물</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;반응형 메인페이지</P>
               <h3>컨셉설명</h3>
               <p>사용자의 편의성을 위해 일정을 선택할 수 있도록 메인페이지에 추가했습니다.<br>그리드 레이아웃을 활용하여 디자인을 규칙적으로 제작하였습니다.<br> 한옥의 우아하고 고전적인 느낌을 주기 위해 컨셉 색상을 보랏빛으로 정했습니다.</p>
-              <div class="btn_p"><a href="http://designlee.dothome.co.kr/1018/">Web 바로가기</a></div>
-              <div class="btn_p"><a href="">Process 보기</a></div>
+              <div><a href="http://designlee.dothome.co.kr/1006/" title="달콤커피" target="_blink"><button class="r_btn"><span>web 바로가기</span></button></a></div>
+              <!--<div><a href="">Process 보기</a></div>-->
             </div>
           </div>
           <div class="swiper-slide">
@@ -342,8 +246,8 @@
               <P><span class="bold">제  작  물</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PC 메인페이지</P>
               <h3>컨셉설명</h3>
               <p>사용자가 메뉴를 클릭하면 이동하는 원페이지 레이아웃으로 제작되었습니다.<br>기업 로고 색상을 강조하여 화려하고 감각적으로 컨텐츠를 표현했습니다.<br>직관적이고 사용하기 쉽도록 디자인하였습니다.</p>
-              <div class="btn_p"><a href="">Web 바로가기</a></div>
-              <div class="btn_p"><a href="">Process 보기</a></div>
+              <div><a href="http://designlee.dothome.co.kr/0221/" title="달콤커피" target="_blink"><button class="r_btn"><span>web 바로가기</span></button></a></div>
+              <!--<div><a href="">Process 보기</a></div>-->
             </div>
           </div>
           <div class="swiper-slide">
@@ -357,8 +261,8 @@
               <P><span class="bold">제  작  물</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;반응형 메인페이지</P>
               <h3>컨셉설명</h3>
               <p>강화도, 고인돌을 상징적으로 표현하여 로고를 완성했습니다. 자연친화적이고 내추럴한<br> 느낌의 색상으로 컨셉을 정하여 사용자가 친근감을 느끼도록 디자인했습니다.<br>제공 서비스를 카테고리하여 직관적으로 해당 컨텐츠를 파악할 수 있도록 디자인 하였습니다.</p>
-              <div class="btn_p"><a href="http://designlee.dothome.co.kr/0916/">Web 바로가기</a></div>
-              <div class="btn_p"><a href="">Process 보기</a></div>
+              <div><a href="http://designlee.dothome.co.kr/0916/" title="달콤커피" onClick="window.open(this.href, '', 'width=425'); return false;" target="_blink"><button class="r_btn"><span>web 바로가기</span></button></a></div>
+              <!--<div><a href="">Process 보기</a></div>-->
             </div>
           </div>
         </div>
@@ -366,27 +270,6 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
-
-
-      <script>
-        var swiper = new Swiper(".mySwiper", {
-          spaceBetween: 30,
-          centeredSlides: true,
-          autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-      </script>
-      
 
 
     </section>
@@ -406,7 +289,7 @@
                   <h2>하림펫푸드</h2>
                 </div>
               </figcaption>
-              <a href="http://designlee.dothome.co.kr/1123/"></a>
+              <a href="http://designlee.dothome.co.kr/1123/" target="_blank"></a>
             </figure>
         </div>
         
@@ -418,7 +301,7 @@
                 <h2>캐스퍼현대자동차</h2>
               </div>
             </figcaption>
-            <a href="http://designlee.dothome.co.kr/1223/"></a>
+            <a href="http://designlee.dothome.co.kr/0210/" target="_blank"></a>
           </figure>
         </div>
 
@@ -430,19 +313,19 @@
                 <h2>아프리카동물메디컬센터</h2>
               </div>
             </figcaption>
-            <a href="http://designlee.dothome.co.kr/1029/"></a>
+            <a href="http://designlee.dothome.co.kr/1029/" target="_blank" alt="아프리카동물메디컬센터" onClick="window.open(this.href, '', 'width=425'); return false;"></a>
           </figure>
         </div>
 
         <div class="imgs img4">   
           <figure class="p_eft">
-            <p>Viewport&nbsp;&nbsp;&nbsp;&nbsp;반응형 / 웹표준 / 웹접근성<br>Program&nbsp;&nbsp;&nbsp;&nbsp;Html5, CSS3, JS&jquery</p>
+            <p>Viewport&nbsp;&nbsp;&nbsp;&nbsp;웹표준 / 웹접근성<br>Program&nbsp;&nbsp;&nbsp;&nbsp;Html5, CSS3, JS&jquery</p>
             <figcaption>
               <div class="p_bd">
                 <h2>비스타워커힐</h2>
               </div>
             </figcaption>
-            <a href="http://designlee.dothome.co.kr/1014/"></a>
+            <a href="http://designlee.dothome.co.kr/1014/" target="_blank"></a>
           </figure>
         </div>
     </div>
